@@ -15,5 +15,19 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.4"
-  }
-}
+  },
+  "babel": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      }
+    }
