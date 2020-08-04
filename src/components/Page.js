@@ -20,7 +20,6 @@ class Page extends Component {
       <Fragment>
         <GlobalStyle />
         <Meta />
-
         <ThemeProvider theme={theme}>
           <StyledPage>
             <Header />

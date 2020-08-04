@@ -1,21 +1,18 @@
-import React, { Component } from "react";
-import Form from "./Form";
-import Link from "./Link";
-
+import React, { Component, Fragment } from "react";
 import StyledMain from "./styles/StyledMain";
 import GetStarted from "./GetStarted";
 import PreFooter from "./PreFooter";
-
+import Cards from "./Cards";
 class Main extends Component {
   render() {
     return (
-      <StyledMain>
-        <GetStarted />
-        {/* <Form /> */}
-        {/* <Link /> */}
-        <div></div>
-        <PreFooter />
-      </StyledMain>
+      <Fragment>
+        <StyledMain>
+          <GetStarted />
+          <Cards />
+          <PreFooter />
+        </StyledMain>
+      </Fragment>
     );
   }
 }

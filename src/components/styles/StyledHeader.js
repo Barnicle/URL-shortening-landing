@@ -4,8 +4,6 @@ const StyledHeader = styled.header`
   grid-template-columns: 100px 1fr;
   grid-gap: 10px;
   place-items: center;
-  padding-left: 5rem;
-  padding-right: 5rem;
 
   .dropBtn {
     display: none;

@@ -20,7 +20,9 @@ body{
   font-size: 1.8rem;
   font-weight: 500;
 
-
+p{
+  font-size: 1.3rem;
+}
 
   font-family: 'Poppins', sans-serif;
 }
