@@ -1,4 +1,6 @@
+import React, { Fragment } from "react";
 import Card from "./Card";
+import Form from "./Form";
 import styled from "styled-components";
 const Cards = () => {
   const cards = [
@@ -23,21 +25,26 @@ const Cards = () => {
   ];
 
   return (
-    <StyledCardsWrapper>
-      <h3>Advanced Statistics</h3>
-      <p>
-        Track how your links are performing across the web with our advanced
-        statistics dashboard
-      </p>
-      <StyledCards>
-        {Object.keys(cards).map((el) => (
-          <Card key={cards[el].name} props={cards[el]} />
-        ))}
-      </StyledCards>
-    </StyledCardsWrapper>
+    <Fragment>
+      <StyledCardsWrapper>
+        <Form />
+        <h3>Advanced Statistics</h3>
+        <p>
+          Track how your links are performing across the web with our advanced
+          statistics dashboard
+        </p>
+        <StyledCards>
+          <div className="green-line"></div>
+          {Object.keys(cards).map((el) => (
+            <Card key={cards[el].name} props={cards[el]} />
+          ))}
+        </StyledCards>
+      </StyledCardsWrapper>
+    </Fragment>
   );
 };
 const StyledCardsWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -50,9 +57,26 @@ const StyledCardsWrapper = styled.div`
   }
 `;
 const StyledCards = styled.div`
+  position: relative;
   padding: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
+  z-index: 5;
+  .green-line {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    background: ${(props) => props.theme.cyan};
+    height: 10px;
+    z-index: 3;
+  }
+  @media (max-width: 845px) {
+    flex-flow: column wrap;
+    .green-line {
+      transform: rotate(90deg);
+    }
+  }
 `;
 export default Cards;

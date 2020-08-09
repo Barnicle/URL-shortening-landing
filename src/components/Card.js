@@ -23,6 +23,8 @@ const StyledCard = styled.div`
   font-size: 1.4rem;
   border-radius: 0.5rem;
   margin: 1rem;
+  z-index: 5;
+
   div {
     position: absolute;
     top: -2rem;
@@ -36,16 +38,6 @@ const StyledCard = styled.div`
     img {
       width: 20px;
     }
-  }
-
-  :nth-child(2)::after {
-    position: absolute;
-    display: block;
-    top: 50%;
-    right: -10%;
-    content: "";
-    width: 25px;
-    background: green;
   }
 `;
 
